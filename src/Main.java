@@ -6,6 +6,7 @@ import Kebab.*;
 import Shish.*;
 import Point.*;
 import Pie.*;
+import Tree.*;
 
 public class Main {
     public static void main(String args[]){
@@ -30,7 +31,9 @@ public class Main {
                          new Topping(new PieTuna(),
                            new Topping(2,
                              new Bottom())));
-
+        TreeD t = new Split(new Bud(),
+                            new Flat(new Apple(),
+                                     new Bud()));
         System.out.println( s );
         System.out.println( s.onlyOnions());
         System.out.println(s.isVegetarian());
@@ -52,5 +55,7 @@ public class Main {
         System.out.println( pp.accept(new RemoveObjectV(new PieTuna())) );
         System.out.println(pp.accept(new SubstV(new PieTuna(),new PieAnchovy())));
 
+        System.out.println( t );
+        System.out.println( t.accept(new iHeightV()) );
     }
 }
