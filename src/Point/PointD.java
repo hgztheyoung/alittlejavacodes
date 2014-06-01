@@ -4,8 +4,8 @@ package Point;
   Created by hgz on 2014/5/15.
  */
 abstract public class PointD {
-    int x;
-    int y;
+    public int x;
+    public int y;
 
     PointD(int _x,int _y){
         x = _x;
@@ -15,6 +15,11 @@ abstract public class PointD {
         return
           distanceToO() <= p.distanceToO();
     }
+
+    public PointD minus(PointD p){
+        return new CartesianPt(x - p.x,y - p.y);
+    }
+
     public abstract int distanceToO();
 }
 

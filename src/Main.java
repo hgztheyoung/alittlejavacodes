@@ -54,11 +54,13 @@ public class Main {
         System.out.println(pp.removeInteger(2));
         System.out.println( pp.accept(new RemoveObjectV(new PieTuna())) );
         System.out.println(pp.accept(new SubstV(new PieTuna(),new PieAnchovy())));
+        System.out.println( pp.accept(new LtdSubstV(1,2,new PieAnchovy())) );
 
         System.out.println( t );
         System.out.println( t.accept(new iHeightV()) );
         System.out.println(t.accept(new IsFlatV()));
         System.out.println(t.accept(new IsSplitV()));
         System.out.println(t.accept(new OccursV(new Apple())));
+
     }
 }
