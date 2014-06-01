@@ -5,17 +5,12 @@ import java.security.PublicKey;
 /**
   Created by hgz on 2014/6/1.
  */
-class LtdSubstV implements PieVisitorI{
+class LtdSubstV extends SubstD{
     int c;
-    Object n;
-    Object o;
     LtdSubstV(int _c,Object _n,Object _o){
         c = _c;
         n = _n;
         o = _o;
-    }
-    public PizzaPieD forBottom(){
-        return new Bottom();
     }
     public PizzaPieD forTopping(Object t,PizzaPieD r){
         if(c == 0)
