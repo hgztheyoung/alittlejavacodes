@@ -3,9 +3,9 @@ package Pie;
 /**
   Created by hgz on 2014/6/1.
  */
-class LtdSubstV extends SubstD{
+public class LtdSubstV extends SubstV{
     int c;
-    LtdSubstV(int _c,Object _o,Object _n){
+    public LtdSubstV(int _c, Object _o, Object _n){
         super(_o, _n);
         c = _c;
     }
