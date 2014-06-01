@@ -6,8 +6,17 @@ package Tree;
 public class Flat extends TreeD{
     FruitD f;
     TreeD t;
-    Flat(FruitD _f,TreeD _t){
+    public Flat(FruitD _f, TreeD _t){
         f = _f;
         t = _t;
+    }
+
+    public boolean accept(bTreeVisitorI ask) {
+        return ask.forFlat(f,t);
+    }
+    public int accept(iTreeVisitorI ask) { return ask.forFlat(f,t); }
+
+    public String toString(){
+        return  "new " + getClass().getName() + "(" + f +","+ t + ")";
     }
 }
