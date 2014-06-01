@@ -1,16 +1,13 @@
 package Pie;
 
-import java.security.PublicKey;
-
 /**
   Created by hgz on 2014/6/1.
  */
 class LtdSubstV extends SubstD{
     int c;
-    LtdSubstV(int _c,Object _n,Object _o){
+    LtdSubstV(int _c,Object _o,Object _n){
+        super(_o, _n);
         c = _c;
-        n = _n;
-        o = _o;
     }
     public PizzaPieD forTopping(Object t,PizzaPieD r){
         if(c == 0)

@@ -5,8 +5,7 @@ package Pie;
  */
 public class SubstV extends SubstD{
     public SubstV(Object _o,Object _n){
-        o = _o;
-        n = _n;
+        super(_o, _n);
     }
     public PizzaPieD forTopping(Object t,PizzaPieD r){
         if(o.equals(t)){

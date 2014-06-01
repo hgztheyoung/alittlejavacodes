@@ -6,6 +6,10 @@ package Pie;
 abstract public class SubstD implements PieVisitorI{
     Object n;
     Object o;
+    SubstD(Object _o,Object _n){
+        o = _o;
+        n = _n;
+    }
     public PizzaPieD forBottom(){
         return new Bottom();
     }
