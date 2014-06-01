@@ -3,7 +3,7 @@ package Tree;
 /**
  * Created by hgz on 2014/6/1.
  */
-public class blsFlatV implements bTreeVisitorI {
+public class IsFlatV implements bTreeVisitorI {
     public boolean forBud(){
         return true;
     }

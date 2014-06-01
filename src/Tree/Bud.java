@@ -9,6 +9,10 @@ public class Bud extends TreeD {
     }
     public int accept(iTreeVisitorI ask) { return ask.forBud(); }
 
+    public Object accept(TreeVisitorI ask){
+        return ask.forBud();
+    }
+
     public String toString(){
         return  "new " + getClass().getName() + "(" + ")";
     }

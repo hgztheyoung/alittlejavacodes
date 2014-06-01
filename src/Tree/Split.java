@@ -13,6 +13,10 @@ public class Split extends TreeD{
     }
     public int accept(iTreeVisitorI ask){return ask.forSplit(l,r);}
 
+    public Object accept(TreeVisitorI ask) {
+        return ask.forSplit(l,r);
+    }
+
     public String toString(){
         return  "new " + getClass().getName() + "(" + l +","+ r + ")";
     }

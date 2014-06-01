@@ -6,5 +6,7 @@ package Tree;
 public abstract class TreeD {
     public abstract boolean accept(bTreeVisitorI ask);
     public abstract int accept(iTreeVisitorI ask);
+
+    public abstract Object accept(TreeVisitorI ask);
 }
 

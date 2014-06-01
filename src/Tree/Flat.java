@@ -16,6 +16,10 @@ public class Flat extends TreeD{
     }
     public int accept(iTreeVisitorI ask) { return ask.forFlat(f,t); }
 
+    public Object accept(TreeVisitorI ask) {
+        return ask.forFlat(f,t);
+    }
+
     public String toString(){
         return  "new " + getClass().getName() + "(" + f +","+ t + ")";
     }
