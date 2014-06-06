@@ -10,6 +10,10 @@ public class HasPtV implements ShapeVisitorI {
     public HasPtV(PointD _p){
         p = _p;
     }
+    ShapeVisitorI newHasPt(PointD p){
+        return new HasPtV(p);
+    }
+
     public boolean forCircle(int r) {
         return p.distanceToO() <= r;
     }
@@ -19,7 +23,6 @@ public class HasPtV implements ShapeVisitorI {
     }
 
     public boolean forTranslation(PointD q, ShapeD s) {
-        return s.accept(
-                new HasPtV(p.minus(q)));
+        return s.accept(newHasPt(p.minus(q)));
     }
 }
