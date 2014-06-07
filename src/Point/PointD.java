@@ -20,6 +20,12 @@ abstract public class PointD {
         return new CartesianPt(x - p.x,y - p.y);
     }
 
+    public int moveBy(int deltax,int deltay){
+        x = x + deltax;
+        y = y + deltay;
+        return distanceToO();
+    }
+
     public abstract int distanceToO();
 }
 
