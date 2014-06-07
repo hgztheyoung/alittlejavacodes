@@ -14,7 +14,7 @@ public class Bottom extends PizzaPieD {
         return riFn.forBottom(i);
     }
 
-    public PizzaPieD accept(PieVisitorI ask){
+    public Object accept(PieVisitorI ask){
         return ask.forBottom();
     }
 }

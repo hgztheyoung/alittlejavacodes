@@ -24,7 +24,7 @@ public class Topping extends PizzaPieD {
         return riFn.forTopping(t,r,i);
     }
 
-    public PizzaPieD accept(PieVisitorI ask){
+    public Object accept(PieVisitorI ask){
         return ask.forTopping(t,r);
     }
 

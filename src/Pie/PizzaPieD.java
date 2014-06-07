@@ -13,7 +13,7 @@ public abstract class PizzaPieD {
     RemoveIntegerV riFn = new RemoveIntegerV();
     public abstract PizzaPieD removeInteger(Integer i);
 
-    public abstract PizzaPieD accept(PieVisitorI ask);
+    public abstract Object accept(PieVisitorI ask);
 
     public String toString(){
         return  "new " + getClass().getName() + "(" +  ")";
