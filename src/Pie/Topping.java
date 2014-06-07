@@ -25,7 +25,7 @@ public class Topping extends PizzaPieD {
     }
 
     public Object accept(PieVisitorI ask){
-        return ask.forTopping(t,r);
+        return ask.forTopping(this);
     }
 
     public String toString(){

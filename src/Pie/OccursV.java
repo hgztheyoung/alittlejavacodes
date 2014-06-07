@@ -8,14 +8,14 @@ public class OccursV implements PieVisitorI{
     OccursV(Object _a){
         a = _a;
     }
-    public Object forBottom() {
+    public Object forBottom(Bottom that) {
         return 0;
     }
 
-    public Object forTopping(Object t, PizzaPieD r) {
-        if(t.equals(a))
-            return (Integer)r.accept(this) + 1;
+    public Object forTopping(Topping that) {
+        if(that.t.equals(a))
+            return (Integer)that.r.accept(this) + 1;
         else
-            return r.accept(this);
+            return that.r.accept(this);
     }
 }

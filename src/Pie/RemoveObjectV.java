@@ -8,13 +8,13 @@ public class RemoveObjectV implements PieVisitorI{
     public RemoveObjectV(Object _o){
         o = _o;
     }
-    public Object forBottom(){
+    public Object forBottom(Bottom that){
         return new Bottom();
     }
-    public Object forTopping(Object t,PizzaPieD r){
-        if(o.equals(t))
-            return  r.accept(this);
+    public Object forTopping(Topping that){
+        if(o.equals(that.t))
+            return  that.r.accept(this);
         else
-            return new Topping(t, (PizzaPieD)r.accept(this));
+            return new Topping(that.t, (PizzaPieD)that.r.accept(this));
     }
 }

@@ -15,6 +15,6 @@ public class Bottom extends PizzaPieD {
     }
 
     public Object accept(PieVisitorI ask){
-        return ask.forBottom();
+        return ask.forBottom(this);
     }
 }

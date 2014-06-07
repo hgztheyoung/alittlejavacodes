@@ -10,16 +10,19 @@ public class SubstV implements PieVisitorI{
         o = _o;
         n = _n;
     }
-    public Object forBottom(){
-        return new Bottom();
+    public Object forBottom(Bottom that){
+        return that;
     }
 
-    public Object forTopping(Object t,PizzaPieD r){
-        if(o.equals(t)){
-            return new Topping(n, (PizzaPieD) r.accept(this));
+    public Object forTopping(Topping that){
+        if(o.equals(that.t)){
+            that.t = n;
+            that.r.accept(this);
+            return that;
         }
         else{
-            return new Topping(t, (PizzaPieD) r.accept(this));
+            that.r.accept(this);
+            return that;
         }
     }
 }
