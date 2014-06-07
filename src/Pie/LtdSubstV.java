@@ -9,16 +9,18 @@ public class LtdSubstV extends SubstV{
         super(_o, _n);
         c = _c;
     }
-    public PizzaPieD forTopping(Object t,PizzaPieD r){
+    public PizzaPieD forTopping(Topping that){
         if(c == 0)
-            return new Topping(t,r);
+            return that;
         else
-            if(o.equals(t))
-                return
-                  new Topping(n,r.accept(new LtdSubstV(c-1,n,o)));
-            else
-                return
-                  new Topping(t,r.accept(this));
+            if(o.equals(that.t)) {
+                that.r.accept(new LtdSubstV(c - 1, n, o));
+                return that;
+            }
+            else{
+                that.r.accept(this);
+                return that;
+            }
     }
 
 }
